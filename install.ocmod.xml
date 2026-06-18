@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<modification>
+  <name>Hope Music App</name>
+  <code>hopemusicapp</code>
+  <version>1.0.0</version>
+  <author>Daiation Fernandes</author>
+  <link>https://github.com/daiacion-fernandes/apphopemusic</link>
+  <license>MIT</license>
+  
+  <!-- Compatibilidade com versões OpenCart -->
+  <compatibility>
+    <opencart>3.0</opencart>
+    <opencart>3.0.2</opencart>
+    <opencart>3.0.3</opencart>
+    <opencart>4.0</opencart>
+  </compatibility>
+
+  <!-- Descrição da modificação -->
+  <description>
+    <![CDATA[
+      Hope Music App é uma aplicação profissional para integração de música em sua loja OpenCart.
+      
+      Funcionalidades:
+      - Gerenciamento de catálogo musical
+      - Interface intuitiva e responsiva
+      - Suporte a múltiplas versões do OpenCart
+      - Fácil instalação e configuração
+    ]]>
+  </description>
+
+  <!-- Modificações de arquivo (adicione conforme necessário) -->
+  <file path="catalog/view/theme/default/template/product/product.twig">
+    <operation>
+      <search><![CDATA[{{ tab_attribute }}]]></search>
+      <add position="after"><![CDATA[
+        {% if hopemusicapp_enabled %}
+          <div class="tab-pane" id="tab-music">
+            <h3>{{ heading_music }}</h3>
+            <div id="hopemusicapp-player">
+              <!-- Music player aqui -->
+            </div>
+          </div>
+        {% endif %}
+      ]]></add>
+    </operation>
+  </file>
+
+</modification>
