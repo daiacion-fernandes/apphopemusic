@@ -1,0 +1,43 @@
+# OpenCart directories
+/config.php
+/admin/config.php
+/storage/
+/system/logs/
+/system/cache/
+
+# Dependencies
+/vendor/
+node_modules/
+composer.lock
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Build files
+/build/
+/dist/
+*.zip
+*.tar.gz
+
+# Test files
+/tests/coverage/
